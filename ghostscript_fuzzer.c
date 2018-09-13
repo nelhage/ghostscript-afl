@@ -66,7 +66,7 @@ int main(int argc, char **argv) {
     close(fd);
 
     gsapi_run_string_with_length(minst, buf, nread, 0, &exit_code);
-
+    free(buf);
 
     return 0;
 }
