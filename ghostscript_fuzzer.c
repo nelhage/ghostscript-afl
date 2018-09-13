@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
     int exit_code;
     gsapi_run_string_begin(minst, 0, &exit_code);
     {
-        const char *input = "nulldevice";
+        const char *input = "nulldevice /== { pop } def /=== { pop } def";
         gsapi_run_string_continue(minst, input, strlen(input), 0, &exit_code);
     }
     code = gsapi_run_string_end(minst, 0, &exit_code);
