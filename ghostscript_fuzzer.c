@@ -49,7 +49,8 @@ int main(int argc, char **argv) {
              "/=== { pop } def "
              "{ 360 mod exch 360 mod exch arcn } bind /arcn exch def "
              "{ 360 mod exch 360 mod exch arc } bind /arc exch def "
-             ) ;
+             "{ pop } /findfont exch def "
+             );
         gsapi_run_string_continue(minst, input, strlen(input), 0, &exit_code);
     }
     code = gsapi_run_string_end(minst, 0, &exit_code);
