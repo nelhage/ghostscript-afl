@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
 
-RUN apt-get -y update
-RUN apt-get -y install clang-6.0 llvm-6.0-dev build-essential git
-RUN apt-get -y install autoconf
+RUN apt-get -y update && apt-get -y install --no-install-recommends \
+  clang-6.0 llvm-6.0-dev build-essential \
+  git autoconf vim-common
 RUN mkdir -p /src
 
 ADD http://lcamtuf.coredump.cx/afl/releases/afl-latest.tgz /src/
