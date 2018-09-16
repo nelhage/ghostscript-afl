@@ -42,7 +42,14 @@ int main(int argc, char **argv) {
     int exit_code;
     gsapi_run_string_begin(minst, 0, &exit_code);
     {
-        const char *input = "nulldevice /== { pop } def /=== { pop } def";
+        const char *input =
+            (
+             "nulldevice "
+             "/== { pop } def "
+             "/=== { pop } def "
+             "{ 360 mod exch 360 mod exch arcn } bind /arcn exch def "
+             "{ 360 mod exch 360 mod exch arc } bind /arc exch def "
+             ) ;
         gsapi_run_string_continue(minst, input, strlen(input), 0, &exit_code);
     }
     code = gsapi_run_string_end(minst, 0, &exit_code);
