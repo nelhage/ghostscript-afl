@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
         "-q",
         "-dSAFER",
         "-dNODISPLAY",
-        "-dOutputFile=/dev/null",
+        "-sOutputFile=/dev/null",
         "-sstdout=/dev/null",
         "-dBATCH",
         "-dNOPAUSE",
